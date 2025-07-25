@@ -4,7 +4,6 @@ import { useAuthStore } from "./src/features/auth/model/useAuthStore";
 
 export const API = axios.create({
   baseURL: 'http://34.30.198.185/api', 
-  withCredentials: true
 })
 
 

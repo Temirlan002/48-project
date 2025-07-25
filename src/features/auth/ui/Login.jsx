@@ -3,6 +3,7 @@ import { Button, Form, Input, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 import { login } from "../api/authApi";
 import { useAuthStore } from "../model/useAuthStore";
+import { getProfile } from "../../../features/auth/api/authApi";
 
 const Login = () => {
 

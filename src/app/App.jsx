@@ -3,6 +3,7 @@ import '../App.css'
 import Register from '../features/auth/ui/Register'
 import Login from '../features/auth/ui/Login'
 import { Layout, Menu } from 'antd'
+import UserCard from '../entities/user/ui/UserCard'
 
 const { Header, Content } = Layout
 
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/profile' element={<UserCard />} />
           </Routes>
         </Content>
       </Layout>
