@@ -4,6 +4,9 @@ import Register from '../features/auth/ui/Register'
 import Login from '../features/auth/ui/Login'
 import { Layout, Menu } from 'antd'
 import UserCard from '../entities/user/ui/UserCard'
+import ProductList from '../entities/products/ui/ProductList'
+import AddProduct from '../entities/products/ui/AddProduct'
+import EditProduct from '../entities/products/ui/EditProduct'
 
 const { Header, Content } = Layout
 
@@ -23,6 +26,9 @@ function App() {
             <Menu.Item key={'3'}>
               <Link to="/profile">Профиль</Link>
             </Menu.Item>
+            <Menu.Item key={'4'}>
+              <Link to="/products">Товары</Link>
+            </Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '24px' }}>
@@ -30,6 +36,9 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
             <Route path='/profile' element={<UserCard />} />
+            <Route path='/products' element={<ProductList />} />
+            <Route path='/products/create' element={<AddProduct />} />
+            <Route path='/products/:id/edit' element={<EditProduct />} />
           </Routes>
         </Content>
       </Layout>
